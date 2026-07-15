@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Python App</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at top, #24345f, #0b1020 58%); color: #eff5ff; }
+      main { width: min(680px, calc(100% - 32px)); padding: 48px; border: 1px solid #ffffff24; border-radius: 24px; background: #111a32cc; box-shadow: 0 24px 80px #0007; }
+      .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #49d17d24; color: #8cf4b2; font-size: .85rem; font-weight: 700; }
+      h1 { margin: 18px 0 10px; font-size: clamp(2rem, 6vw, 3.75rem); letter-spacing: -.05em; }
+      p { color: #bdc9e7; line-height: 1.65; font-size: 1.1rem; }
+      .status { margin-top: 28px; padding: 16px; border-radius: 12px; background: #ffffff0d; color: #dfe8ff; }
+      code { color: #aebfff; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="tag">● RUNNING LOCALLY</span>
+      <h1>Your Python web app is live.</h1>
+      <p>This page is served by Flask inside Docker. Use it as the starting point for your application.</p>
+      <div class="status" id="status">Checking <code>/health</code>…</div>
+    </main>
+    <script>
+      fetch('/health')
+        .then(response => response.json())
+        .then(data => { document.getElementById('status').textContent = `Healthy — server time: ${data.time}`; })
+        .catch(() => { document.getElementById('status').textContent = 'Health check unavailable.'; });
+    </script>
+  </body>
+</html>
