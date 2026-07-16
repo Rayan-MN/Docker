@@ -13,7 +13,7 @@ This project runs the Project 2 Flask application and PostgreSQL as separate con
 Docker must be installed and running. Run all commands below from this directory:
 
 ```bash
-cd "3. multi-container-app"
+cd "3.multi-container-app"
 ```
 
 ## Build and run

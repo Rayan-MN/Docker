@@ -22,7 +22,7 @@ Open [http://localhost:8000](http://localhost:8000). The app also provides a mac
 
 ## Portfolio progression
 
-This is intentionally a straightforward single-stage Docker build. See `../2. multistage-build-optimization` for the same application evolved into a production-minded multi-stage build with a smaller runtime surface, a non-root user, and Docker health checking.
+This is intentionally a straightforward single-stage Docker build. See `../2.multistage-build-optimization` for the same application evolved into a production-minded multi-stage build with a smaller runtime surface, a non-root user, and Docker health checking.
 
 ## Run without Docker
 
