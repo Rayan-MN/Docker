@@ -1,6 +1,6 @@
 # Dockerize a simple Flask app
 
-`docker1` is the starting point of this Docker portfolio: a small Flask web app packaged in a single container image.
+`simple-app` is the starting point of this Docker portfolio: a small Flask web app packaged in a single container image.
 
 It demonstrates the essential workflow:
 
@@ -22,7 +22,7 @@ Open [http://localhost:8000](http://localhost:8000). The app also provides a mac
 
 ## Portfolio progression
 
-This is intentionally a straightforward single-stage Docker build. See `../docker2` for the same application evolved into a production-minded multi-stage build with a smaller runtime surface, a non-root user, and Docker health checking.
+This is intentionally a straightforward single-stage Docker build. See `../2. multistage-build-optimization` for the same application evolved into a production-minded multi-stage build with a smaller runtime surface, a non-root user, and Docker health checking.
 
 ## Run without Docker
 
